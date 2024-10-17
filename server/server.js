@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const expenseRoutes = require('./routes/expenseRoutes');  // Import the expense routes
 
 const app = express();
 
@@ -9,19 +10,16 @@ app.use(express.json());
 app.use(cors());
 
 // MongoDB connection
-const mongoURI = 'mongodb+srv://paxiong25:Davidonly24@weddingexpensecluster.bwdtj.mongodb.net/weddingExpenses?retryWrites=true&w=majority';
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+const mongoURI = 'mongodb+srv://paxiong25:Davidonly24@weddingexpensecluster.bwdtj.mongodb.net/?retryWrites=true&w=majority&appName=WeddingExpenseCluster';
+mongoose.connect(mongoURI)
   .then(() => console.log('Connected to MongoDB Atlas'))
   .catch(err => console.error('MongoDB connection error:', err));
 
-// Test Route
-app.get('/', (req, res) => {
-  res.send('Server is running');
-});
+// Use the expense routes
+app.use('/', expenseRoutes);
 
-
-// Start the server
-const PORT = process.env.PORT || 5001;
+// Start the server explicitly on port 5001
+const PORT = 5001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
