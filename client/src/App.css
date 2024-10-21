@@ -1,0 +1,76 @@
+/* Full-screen layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f1ef; /* Very soft, pale peach background */
+  font-family: 'Garamond', serif; /* Elegant, timeless font */
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 800px; /* Wider for desktop */
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Garamond', serif;
+  font-size: 32px;
+  color: #d8a7a7; /* Muted dusty pink for headings, soft and elegant */
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #6f5a5a; /* Muted mauve-gray for a softer contrast */
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #e6cfcf; /* Light muted pink border */
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f1e3e3; /* Soft, muted blush pink background for inputs */
+  color: #4e3b3b; /* Darker muted brownish-pink for text readability */
+}
+
+.input::placeholder {
+  color: #b89b9b; /* Soft muted pink for placeholder text */
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: #d8a7a7; /* Muted dusty pink for buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: #c29595; /* Slightly deeper dusty pink on hover */
+}
+
+.expense-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.expense-list li {
+  background-color: #f4e1e1; /* Pale muted peach for list items */
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: #4e3b3b; /* Soft brownish-pink for readability */
+}
